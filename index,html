@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Viajes Global</title>
+    <style>
+        /* Hace que el chat ocupe todo el espacio disponible en la pantalla */
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: transparent;
+        }
+        /* Forzamos a Dialogflow a abrirse expandido a pantalla completa */
+        df-messenger {
+            --df-messenger-chat-window-height: 100vh;
+            --df-messenger-chat-window-width: 100vw;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Script de Dialogflow -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/df-messenger.js?v=1"></script>
+    
+    <!-- Tu agente de Dialogflow (REMPLAZA TU_AGENT_ID) -->
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Soporte Viajes Global"
+      agent-id="65f8e3fa-8503-4ecc-abce-44152129d7d8"
+      language-code="es"
+      expand="true" 
+    ></df-messenger>
+
+</body>
+</html>
