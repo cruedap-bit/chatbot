@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes Global ES - Proceso Administrativo</title>
+    <style>
+        /* Estilos generales para simular el entorno de la página */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+        header {
+            background-color: #0288d1; /* Azul Viajes/Global */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        main {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        p {
+            line-height: 1.6;
+        }
+        
+        /* Personalización visual del Widget de Dialogflow Messenger */
+        df-messenger {
+            --df-messenger-button-titlebar-color: #0288d1;
+            --df-messenger-chat-background-color: #fafafa;
+            --df-messenger-font-color: #333;
+            --df-messenger-send-placeholder: 'Escribe tu consulta aquí...';
+            --df-messenger-user-message-background:#e1f5fe;
+            --df-messenger-chat-window-height: 500px;
+            --df-messenger-chat-window-width: 370px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Viajes Global ES</h1>
+        <p>Wiki del Proceso Administrativo & Servicio al Cliente</p>
+    </header>
+
+    <main>
+        <h2>Asistente Virtual de Procesos</h2>
+        <p>Bienvenido al portal informativo. En la esquina inferior derecha encontrarás nuestro chatbot inteligente integrado con Dialogflow, diseñado para resolver dudas sobre los flujos de trabajo, políticas de viajes y gestión administrativa.</p>
+    </main>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/df-messenger.js?v=1"></script>
+    
+    <df-messenger
+      intent="WELCOME"
+      chat-title="Soporte Viajes Global"
+      agent-id="65f8e3fa-8503-4ecc-abce-44152129d7d8"
+      language-code="es"
+    ></df-messenger>
+
+</body>
+</html>
