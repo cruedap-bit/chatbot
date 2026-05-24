@@ -1,36 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot Viajes Global</title>
-    <style>
-        /* Hace que el chat ocupe todo el espacio disponible en la pantalla */
-        html, body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
-            background-color: transparent;
-        }
-        /* Forzamos a Dialogflow a abrirse expandido a pantalla completa */
-        df-messenger {
-            --df-messenger-chat-window-height: 100vh;
-            --df-messenger-chat-window-width: 100vw;
-            position: fixed;
-            bottom: 0;
-            right: 0;
-            top: 0;
-            left: 0;
-            z-index: 9999;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wikitraveling Chatbot</title>
+
+  <!-- Estilos personalizados -->
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      font-family: Arial, sans-serif;
+      background:#f4f4f4;
+    }
+
+    h1{
+      text-align:center;
+      margin-top:40px;
+      color:#1e3a8a;
+    }
+
+    p{
+      text-align:center;
+      color:#555;
+    }
+
+    /* Personalización del chatbot */
+    df-messenger {
+      --df-messenger-bot-message: #1e3a8a;
+      --df-messenger-button-titlebar-color: #1e3a8a;
+      --df-messenger-chat-background-color: #ffffff;
+      --df-messenger-font-color: white;
+      --df-messenger-send-icon: #1e3a8a;
+      --df-messenger-user-message: #e5e7eb;
+
+      position: fixed;
+      bottom: 16px;
+      right: 16px;
+      z-index: 999;
+    }
+  </style>
 </head>
+
 <body>
 
-    <!-- Script de Dialogflow -->
-    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/df-messenger.js?v=1"></script>
+  <h1>🌎 Wikitraveling</h1>
+  <p>Asistente virtual de viajes y turismo</p>
+
+  <!-- Script de Dialogflow Messenger -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+
+  <!-- Chatbot -->
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Wikitraveling.01"
+    agent-id="968a7c4f-d9a7-45ac-960c-1329f5bbf952"
+    language-code="es"
+  ></df-messenger>
+
+</body>
+</html>
     
     <!-- Tu agente de Dialogflow (REMPLAZA TU_AGENT_ID) -->
     <df-messenger
